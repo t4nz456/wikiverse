@@ -1,6 +1,7 @@
 import React from 'react';
 import { Page } from './Page';
 import {useState, useEffect} from "react";
+import {App} from './App';
 
 export const PagesList = ({pages, onPageClick}) => {
 	return <>

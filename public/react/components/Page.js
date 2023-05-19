@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState, useEffect} from "react";
+import {PagesList} from "./PagesList";
 
 export const Page = ({ page, onSubmit, onDelete, onCancel }) => {
   const [title, setTitle] = useState(page ? page.title : "");
