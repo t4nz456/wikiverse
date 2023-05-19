@@ -69,29 +69,29 @@ export const App = () => {
 				<h2>An interesting 📚</h2>
 				<PagesList pages={pages} />
 
-				<div>
-						{!selectedPage ? (
-							<>
-								{isAddingPage ? (
-									<Page onSubmit={createPage} onCancel={() => setIsAddingPage(false)} />
-								) : (
-								<>
-										<PagesList pages={pages} onPageClick={handlePageClick} />
-										<button onClick={handleAddPageClick}>Add Page</button>
-								</>
-							)}
-						</>
-					) : (
-					<Page
-						page={selectedPage}
-						onSubmit={createPage}
-						onDelete={deletePage}
-						onCancel={handleBackToListClick}
-					/>
+			<div>
+			{!selectedPage ? (
+				<>
+				{isAddingPage ? (
+					<Page onSubmit={createPage} onCancel={() => setIsAddingPage(false)} />
+				) : (
+					<>
+					<PagesList pages={pages} onPageClick={handlePageClick} />
+					<button onClick={handleAddPageClick}>Add Page</button>
+					</>
 				)}
-        	</div>
+				</>
+			) : (
+				<Page
+				page={selectedPage}
+				onSubmit={createPage}
+				onDelete={deletePage}
+				onCancel={handleBackToListClick}
+				/>
+			)}
+			</div>
 		</main>
-	);
+  );
 };
 
 export default App;
